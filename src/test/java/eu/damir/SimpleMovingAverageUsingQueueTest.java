@@ -14,7 +14,7 @@ public class SimpleMovingAverageUsingQueueTest {
 
         float[] input = new float[initialCapacity];
         for (int i = 0; i < input.length; i++) {
-            input[i] = i + 1;
+            input[i] = 5;
         }
 
         //Time elapsed: 4515 on my macbook pro mid 2014
@@ -22,7 +22,7 @@ public class SimpleMovingAverageUsingQueueTest {
         for (int h = 2; h < 201; h++) {
             SimpleMovingAverageUsingQueue sma = new SimpleMovingAverageUsingQueue(h);
             for (int i = 0; i < initialCapacity; i++) {
-                sma.average(input[i]);
+                float average = sma.average(input[i]);
             }
         }
         long end = System.currentTimeMillis();

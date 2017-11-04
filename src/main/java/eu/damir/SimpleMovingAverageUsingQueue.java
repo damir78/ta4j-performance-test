@@ -18,11 +18,11 @@ public class SimpleMovingAverageUsingQueue {
     }
 
     public float average(float num) {
+        sum += num;
+        window.add(num);
         if (window.size() > period) {
             sum -= window.remove();
         }
-        sum += num;
-        window.add(num);
         return sum / window.size();
     }
 }
